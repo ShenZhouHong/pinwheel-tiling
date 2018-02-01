@@ -67,9 +67,9 @@ For each angle in $\triangle A_{i}B_{i}C_{i}$, where the vertices are of the sam
 Let length $A_{0}B_{0} = x$. Define $\big[\triangle A_{i}B_{i}C_{i}\big]$ as the notation for the area of $\triangle A_{i}B_{i}C_{i}$. Therefore, $\big[\triangle A_{0}B_{0}C_{0}\big] = x^2$. Because $\triangle A_{0}B_{0}C_{0}$ contains five isometric subtriangles of the order $\triangle A_{1}B_{1}C_{1}$, the area of each $n = 1$ triangle equals $\frac{x^2}{5}$. Recall that length $A_{1}C_{1} = A_{0}C_{0}$, where: $A_{1}C_{1} = \sqrt{(A_{1}B_{1})^2 + (B_{1}C_{1})^2}$. As a result, it is shown that each shape is shrunk by an dilation factor of $\frac{1}{\sqrt{5}}$, for $\sqrt{5} \times \frac{1}{\sqrt{5}} = 1$:
 \begin{equation}
     \begin{aligned}
-        A_{n-1}B_{n-1} &= \frac{A_{i}B_{i}}{\sqrt{5}} \\
-        B_{n-1}C_{n-1} &= \frac{B_{i}C_{i}}{\sqrt{5}} \\
-        A_{n-1}C_{n-1} &= \frac{A_{i}C_{i}}{\sqrt{5}}
+        A_{i-1}B_{i-1} &= \frac{A_{i}B_{i}}{\sqrt{5}} \\
+        B_{i-1}C_{i-1} &= \frac{B_{i}C_{i}}{\sqrt{5}} \\
+        A_{i-1}C_{i-1} &= \frac{A_{i}C_{i}}{\sqrt{5}}
     \end{aligned}
 \end{equation}
 
@@ -130,15 +130,15 @@ Which generalizes to the form $a + ar^1 + ar^2 + \ldots$, with $a = x^2, r = \fr
 By connecting each vertice in $\triangle A_{0}B_{0}C_{0}$ with it's corresponding vertice-pair in subsequent subtriangles, a `pinwheel spiral' can be constructed:
 
 \begin{enumerate}
-    \item Draw line $A_{0}A_{1}$, $A_{1}A_{2}$, $A_{2}A_{3}$ \ldots\ for all $A_{i}A_{n + 1}$
-    \item Draw line $B_{0}B_{1}$, $B_{1}B_{2}$, $B_{2}B_{3}$ \ldots\ for all $B_{i}B_{n + 1}$
-    \item Draw line $C_{0}C_{1}$, $C_{1}C_{2}$, $C_{2}C_{3}$ \ldots\ for all $C_{i}C_{n + 1}$
+    \item Draw line $A_{0}A_{1}$, $A_{1}A_{2}$, $A_{2}A_{3}$ \ldots\ for all $A_{i}A_{i + 1}$
+    \item Draw line $B_{0}B_{1}$, $B_{1}B_{2}$, $B_{2}B_{3}$ \ldots\ for all $B_{i}B_{i + 1}$
+    \item Draw line $C_{0}C_{1}$, $C_{1}C_{2}$, $C_{2}C_{3}$ \ldots\ for all $C_{i}C_{i + 1}$
 \end{enumerate}
 
 \input{figures/pinwheel-spiral.tex}
 
 \noindent
-Note how there are 3 spirals, depending on the vertice used in it's construction. Let the 3 spirals be defined as the $A_n$ spiral, $B_n$ spiral, and the $C_n$ spiral:
+Note how there are 3 spirals, depending on the vertice used in it's construction. Let the 3 spirals be defined as the $A_{i}$ spiral, $B_{i}$ spiral, and the $C_{i}$ spiral:
 
 \input{figures/a-spiral.tex}
 
