@@ -1,0 +1,86 @@
+\section{Introduction}
+\subsection{Rationale}
+
+\newpage
+\section{Constructions}
+\subsection{Pinwheel tile}
+\begin{enumerate}
+    \item Draw $\triangle A_{0}B_{0}C_{0}$ where:
+    \begin{equation}
+        \begin{aligned}
+            \angle A_{0}B_{0}C_{0} &= 90\degree \\
+            B_{0}C_{0} &= 2A_{0}B_{0} \\
+            A_{0}C_{0} &= \sqrt{(A_{0}B_{0})^2 + (B_{0}C_{0})^2} \\
+        \end{aligned}
+    \end{equation}
+    \begin{figure}[H]
+        \centering
+        \begin{tikzpicture}[scale=5]
+            \coordinate [label=above: $A_{0}$] (A_0) at (0,1);
+            \coordinate [label=below: $B_{0}$] (B_0) at (0,0);
+            \coordinate [label=right: $C_{0}$] (C_0) at (2,0);
+            \draw (A_0) -- (B_0) -- (C_0) -- (A_0);
+        \end{tikzpicture}
+        \label{right-triangle}
+    \end{figure}
+
+    \item Draw line $B_{0}A_{1}$, where $B_{0}A_{1} \perp A_{0}C_{0}$.
+    \item Draw point $C_{1}$ at the midpoint of $B_{0}C_{0}$.
+    \item Draw line $C_{1}H_{0}$, where $C_{0}H_{0} \perp A_{0}C_{0}$.
+    \item Draw line $B_{1}C_{1}$, where $B_{1}C_{1} \perp B_{0}A_{1}$.
+    \item Draw line $A_{1}C_{1}$.
+\end{enumerate}
+
+\input{figures/pinwheel-triangle.tex}
+
+\subsection{Recursive pinwheel tiling}
+Repeat steps 2 through 6, operating on each subsequent $\triangle A_{n}B_{n}C_{n}$.
+\input{figures/pinwheel-triangle-recursive.tex}
+
+\section{Properties of the recursive pinwheel tiling}
+\subsection{Angles}
+For each angle in $\triangle A_{n}B_{n}C_{n}$, where the vertices are of the same level $n$ (e.g. \angle $A_{6}B_{6}C_{6}$). This property is apparent becasue each subsequent triangle is similar, therefore all angles are equal.
+\begin{equation}
+    \begin{aligned}
+        \angle A_{n}B_{n}C_{n} &= 90\degree \\
+        \angle B_{n}C_{n}A_{n} &= \tan^{-1}\frac{1}{2} \\
+        \angle B_{n}A_{n}C_{n} &= \tan^{-1}2
+    \end{aligned}
+\end{equation}
+
+\subsection{Area and dilation factor}
+Let length $A_{0}B_{0} = x$. Therefore, the area of $\triangle A_{0}B_{0}C_{0} = x$. Because $\triangle A_{0}B_{0}C_{0}$ contains five isometric subtriangles of the order $\triangle A_{1}B_{1}C_{1}$, the area of each $n = 1$ triangle equals $\frac{x}{5}$. Recall that length $A_{1}C_{1} = A_{0}C_{0}$, where: $A_{1}C_{1} = \sqrt{(A_{1}B_{1})^2 + (B_{1}C_{1})^2}$. As a result, it is shown that each shape is shrunk by an dilation factor of $\frac{1}{\sqrt{5}}$, for $\sqrt{5} \times \frac{1}{\sqrt{5}} = 1$:
+\begin{equation}
+    \begin{aligned}
+        A_{n-1}B_{n-1} &= \frac{A_{n}B_{n}}{\sqrt{5}} \\
+        B_{n-1}C_{n-1} &= \frac{B_{n}C_{n}}{\sqrt{5}} \\
+        A_{n-1}C_{n-1} &= \frac{A_{n}C_{n}}{\sqrt{5}}
+    \end{aligned}
+\end{equation}
+
+\noindent
+Likewise, the area of each subsequent triangle $\triangle A_{n}B_{n}C_{n}$ is shrunk by the same factor.
+
+\subsection{Geometric series, and limit of the area}
+Define $[\triangle A_{n}B_{n}C_{n}]$ as the notation for the area of $\triangle A_{n}B_{n}C_{n}$. Recall how the area of each triangle decreases by an dilation factor of $\frac{1}{\sqrt{5}}$:
+\begin{equation}
+    \begin{aligned}
+        \big[\triangle A_{0}B_{0}C_{0}\big] &= 1,\\
+        \big[\triangle A_{1}B_{1}C_{1}\big] &= \frac{1}{5},\\
+        \big[\triangle A_{2}B_{2}C_{2}\big] &= \frac{1}{25},\\
+        \big[\triangle A_{3}B_{3}C_{3}\big] &= \frac{1}{125},\\
+        \ldots
+    \end{aligned}
+\end{equation}
+
+\noindent
+It is apparent that the decreasing area of the pinwheel triangle follow the following geometric series:
+\begin{equation}
+    1 + \frac{1}{5} + \frac{1}{25} + \frac{1}{125} + \frac{1}{625} + \ldots
+\end{equation}
+\begin{equation}
+    1 + 1\left(\frac{1}{5}\right)^1 + 1\left(\frac{1}{5}\right)^2 + 1\left(\frac{1}{5}\right)^3 + 1\left(\frac{1}{5}\right)^4 + \ldots \\
+\end{equation}
+
+\noindent
+Which generalizes to the form $a + ar^1 + ar^2 + \ldots$, with $a = 1, r = \frac{1}{5}$.
