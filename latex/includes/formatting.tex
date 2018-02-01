@@ -6,3 +6,17 @@
 \lefthyphenmin=4
 \setlength{\parindent}{3em} % Paragraph indentation
 \newtheorem{construction}{Construction}
+
+% The coordinate math engine in tikz has an error that makes it inaccurate at
+% calculating extremely fine coordinates. This redefinition fixes the problem:
+% https://tex.stackexchange.com/questions/256333/256377
+% use the Mark Wibrow's correction
+\makeatletter
+\def\pgfpointnormalised#1{%
+  \pgf@process{#1}%
+  \pgfmathatantwo{\the\pgf@y}{\the\pgf@x}%
+  \let\pgf@tmp=\pgfmathresult%
+  \pgfmathcos@{\pgf@tmp}\pgf@x=\pgfmathresult pt\relax%
+  \pgfmathsin@{\pgf@tmp}\pgf@y=\pgfmathresult pt\relax%
+}
+\makeatother

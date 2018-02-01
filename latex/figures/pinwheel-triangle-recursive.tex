@@ -73,6 +73,17 @@
         \draw (C_6) -- (H_5);
         \draw (B_6) -- (C_6);
         \draw (A_6) -- (C_6);
+
+        \coordinate (A_7) at ($(A_6)!(B_6)!(C_6)$);
+        \coordinate (C_7) at ($(B_6)! 0.5 !(C_6)$);
+        \coordinate (H_6) at ($(A_6)!(C_7)!(C_6)$);
+        \coordinate (B_7) at ($(A_7)!(C_7)!(B_6)$);
+
+        \draw (A_7) -- (B_6);
+        \draw (C_7) -- (H_6);
+        \draw (B_7) -- (C_7);
+        \draw (A_7) -- (C_7);
+
     \end{tikzpicture}
     \label{pinwheel-triangle-infinite}
 \end{figure}
