@@ -45,7 +45,7 @@ There's something beautiful about the nature of infinities, especially ones of t
 \input{figures/pinwheel-triangle.tex}
 
 \subsection{Recursive pinwheel tiling}
-Repeat steps 2 through 6, operating on each subsequent $\triangle A_{n}B_{n}C_{n}$.
+Repeat steps 2 through 6, operating on each subsequent $\triangle A_{i}B_{i}C_{i}$.
 \input{figures/pinwheel-triangle-recursive-small.tex}
 
 \newpage
@@ -54,27 +54,27 @@ Repeat steps 2 through 6, operating on each subsequent $\triangle A_{n}B_{n}C_{n
 
 \section{Properties of the recursive pinwheel tiling}
 \subsection{Angles}
-For each angle in $\triangle A_{n}B_{n}C_{n}$, where the vertices are of the same level $n$ (e.g. \angle $A_{6}B_{6}C_{6}$). This property is apparent becasue each subsequent triangle is similar, therefore all angles are equal.
+For each angle in $\triangle A_{i}B_{i}C_{i}$, where the vertices are of the same level $n$ (e.g. \angle $A_{6}B_{6}C_{6}$). This property is apparent becasue each subsequent triangle is similar, therefore all angles are equal.
 \begin{equation}
     \begin{aligned}
-        \angle A_{n}B_{n}C_{n} &= \frac{\pi}{2} \\
-        \angle B_{n}C_{n}A_{n} &= \tan^{-1}\frac{1}{2} \\
-        \angle B_{n}A_{n}C_{n} &= \tan^{-1}2
+        \angle A_{i}B_{i}C_{i} &= \frac{\pi}{2} \\
+        \angle B_{i}C_{i}A_{i} &= \tan^{-1}\frac{1}{2} \\
+        \angle B_{i}A_{i}C_{i} &= \tan^{-1}2
     \end{aligned}
 \end{equation}
 
 \subsection{Area and dilation factor}
-Let length $A_{0}B_{0} = x$. Define $\big[\triangle A_{n}B_{n}C_{n}\big]$ as the notation for the area of $\triangle A_{n}B_{n}C_{n}$. Therefore, $\big[\triangle A_{0}B_{0}C_{0}\big] = x^2$. Because $\triangle A_{0}B_{0}C_{0}$ contains five isometric subtriangles of the order $\triangle A_{1}B_{1}C_{1}$, the area of each $n = 1$ triangle equals $\frac{x^2}{5}$. Recall that length $A_{1}C_{1} = A_{0}C_{0}$, where: $A_{1}C_{1} = \sqrt{(A_{1}B_{1})^2 + (B_{1}C_{1})^2}$. As a result, it is shown that each shape is shrunk by an dilation factor of $\frac{1}{\sqrt{5}}$, for $\sqrt{5} \times \frac{1}{\sqrt{5}} = 1$:
+Let length $A_{0}B_{0} = x$. Define $\big[\triangle A_{i}B_{i}C_{i}\big]$ as the notation for the area of $\triangle A_{i}B_{i}C_{i}$. Therefore, $\big[\triangle A_{0}B_{0}C_{0}\big] = x^2$. Because $\triangle A_{0}B_{0}C_{0}$ contains five isometric subtriangles of the order $\triangle A_{1}B_{1}C_{1}$, the area of each $n = 1$ triangle equals $\frac{x^2}{5}$. Recall that length $A_{1}C_{1} = A_{0}C_{0}$, where: $A_{1}C_{1} = \sqrt{(A_{1}B_{1})^2 + (B_{1}C_{1})^2}$. As a result, it is shown that each shape is shrunk by an dilation factor of $\frac{1}{\sqrt{5}}$, for $\sqrt{5} \times \frac{1}{\sqrt{5}} = 1$:
 \begin{equation}
     \begin{aligned}
-        A_{n-1}B_{n-1} &= \frac{A_{n}B_{n}}{\sqrt{5}} \\
-        B_{n-1}C_{n-1} &= \frac{B_{n}C_{n}}{\sqrt{5}} \\
-        A_{n-1}C_{n-1} &= \frac{A_{n}C_{n}}{\sqrt{5}}
+        A_{n-1}B_{n-1} &= \frac{A_{i}B_{i}}{\sqrt{5}} \\
+        B_{n-1}C_{n-1} &= \frac{B_{i}C_{i}}{\sqrt{5}} \\
+        A_{n-1}C_{n-1} &= \frac{A_{i}C_{i}}{\sqrt{5}}
     \end{aligned}
 \end{equation}
 
 \noindent
-Likewise, the area of each subsequent triangle $\triangle A_{n}B_{n}C_{n}$ is shrunk by the same factor. This can be proven by first finding the area of the subtriangle by simple division:
+Likewise, the area of each subsequent triangle $\triangle A_{i}B_{i}C_{i}$ is shrunk by the same factor. This can be proven by first finding the area of the subtriangle by simple division:
 
 \begin{equation}
     \begin{aligned}
@@ -130,9 +130,9 @@ Which generalizes to the form $a + ar^1 + ar^2 + \ldots$, with $a = x^2, r = \fr
 By connecting each vertice in $\triangle A_{0}B_{0}C_{0}$ with it's corresponding vertice-pair in subsequent subtriangles, a `pinwheel spiral' can be constructed:
 
 \begin{enumerate}
-    \item Draw line $A_{0}A_{1}$, $A_{1}A_{2}$, $A_{2}A_{3}$ \ldots\ for all $A_{n}A_{n + 1}$
-    \item Draw line $B_{0}B_{1}$, $B_{1}B_{2}$, $B_{2}B_{3}$ \ldots\ for all $B_{n}B_{n + 1}$
-    \item Draw line $C_{0}C_{1}$, $C_{1}C_{2}$, $C_{2}C_{3}$ \ldots\ for all $C_{n}C_{n + 1}$
+    \item Draw line $A_{0}A_{1}$, $A_{1}A_{2}$, $A_{2}A_{3}$ \ldots\ for all $A_{i}A_{n + 1}$
+    \item Draw line $B_{0}B_{1}$, $B_{1}B_{2}$, $B_{2}B_{3}$ \ldots\ for all $B_{i}B_{n + 1}$
+    \item Draw line $C_{0}C_{1}$, $C_{1}C_{2}$, $C_{2}C_{3}$ \ldots\ for all $C_{i}C_{n + 1}$
 \end{enumerate}
 
 \input{figures/pinwheel-spiral.tex}
