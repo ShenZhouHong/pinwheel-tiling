@@ -1,13 +1,13 @@
 \begin{figure}[H]
     \centering
     \begin{tikzpicture}[scale=1, rotate=90]
-        \coordinate [label=above: $A_{0}$] (A_0) at (0,10);
+        \coordinate [label=left: $A_{0}$] (A_0) at (0,7);
         \coordinate [label=below: $B_{0}$] (B_0) at (0,0);
-        \coordinate [label=right: $C_{0}$] (C_0) at (20,0);
+        \coordinate [label=right: $C_{0}$] (C_0) at (14,0);
         \draw[dotted] (A_0) -- (B_0) -- (C_0) -- (A_0);
 
         \coordinate [label=above: $A_{1}$] (A_1) at ($(A_0)!(B_0)!(C_0)$);
-        \coordinate [label=below: $C_{1}$] (C_1) at ($(B_0)!0.5!(C_0)$);
+        \coordinate [label=right: $C_{1}$] (C_1) at ($(B_0)!0.5!(C_0)$);
         \coordinate (H_0) at ($(A_0)!(C_1)!(C_0)$);
         \coordinate [label=left: $B_{1}$] (B_1) at ($(A_1)!(C_1)!(B_0)$);
         \coordinate [label=above: $A_{2}$] (A_2) at ($(A_1)!(B_1)!(C_1)$);
@@ -52,4 +52,5 @@
 
     \end{tikzpicture}
     \label{pinwheel-spiral}
+    \caption{Pinwheel spiral}
 \end{figure}
