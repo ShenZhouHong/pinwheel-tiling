@@ -54,7 +54,7 @@ For each angle in $\triangle A_{n}B_{n}C_{n}$, where the vertices are of the sam
 \end{equation}
 
 \subsection{Area and dilation factor}
-Let length $A_{0}B_{0} = x$. Therefore, the area of $\triangle A_{0}B_{0}C_{0} = x$. Because $\triangle A_{0}B_{0}C_{0}$ contains five isometric subtriangles of the order $\triangle A_{1}B_{1}C_{1}$, the area of each $n = 1$ triangle equals $\frac{x}{5}$. Recall that length $A_{1}C_{1} = A_{0}C_{0}$, where: $A_{1}C_{1} = \sqrt{(A_{1}B_{1})^2 + (B_{1}C_{1})^2}$. As a result, it is shown that each shape is shrunk by an dilation factor of $\frac{1}{\sqrt{5}}$, for $\sqrt{5} \times \frac{1}{\sqrt{5}} = 1$:
+Let length $A_{0}B_{0} = x$. Define $\big[\triangle A_{n}B_{n}C_{n}\big]$ as the notation for the area of $\triangle A_{n}B_{n}C_{n}$. Therefore, $\big[\triangle A_{0}B_{0}C_{0}\big] = x^2$. Because $\triangle A_{0}B_{0}C_{0}$ contains five isometric subtriangles of the order $\triangle A_{1}B_{1}C_{1}$, the area of each $n = 1$ triangle equals $\frac{x^2}{5}$. Recall that length $A_{1}C_{1} = A_{0}C_{0}$, where: $A_{1}C_{1} = \sqrt{(A_{1}B_{1})^2 + (B_{1}C_{1})^2}$. As a result, it is shown that each shape is shrunk by an dilation factor of $\frac{1}{\sqrt{5}}$, for $\sqrt{5} \times \frac{1}{\sqrt{5}} = 1$:
 \begin{equation}
     \begin{aligned}
         A_{n-1}B_{n-1} &= \frac{A_{n}B_{n}}{\sqrt{5}} \\
@@ -64,10 +64,35 @@ Let length $A_{0}B_{0} = x$. Therefore, the area of $\triangle A_{0}B_{0}C_{0} =
 \end{equation}
 
 \noindent
-Likewise, the area of each subsequent triangle $\triangle A_{n}B_{n}C_{n}$ is shrunk by the same factor.
+Likewise, the area of each subsequent triangle $\triangle A_{n}B_{n}C_{n}$ is shrunk by the same factor. This can be proven by first finding the area of the subtriangle by simple division:
+
+\begin{equation}
+    \begin{aligned}
+        A_{0}B_{0} &= x \\
+        B_{0}C_{0} &= 2x \\
+        \big[\triangle A_{0}B_{0}C_{0}\big] &= \frac{A_{0}B_{0} \times B_{0}C_{0}}{2} \\
+        \big[\triangle A_{0}B_{0}C_{0}\big] &= x^2 \\
+        \frac{\big[\triangle A_{1}B_{1}C_{1}\big]}{5} &= \frac{\big[\triangle A_{0}B_{0}C_{0}\big]}{5} \\
+        \frac{\big[\triangle A_{1}B_{1}C_{1}\big]}{5} &= \frac{x^2}{5}
+    \end{aligned}
+\end{equation}
+
+\noindent
+Followed by calculating the area of the subtriangle via $A = \frac{l\times h}{2}$. Both values are equal:
+
+\begin{equation}
+    \begin{aligned}
+        A_{1}B_{1} &= \frac{A_{0}B_{0}}{\sqrt{5}} = \frac{x}{\sqrt{5}}\\
+        B_{1}C_{1} &= \frac{B_{0}C_{0}}{\sqrt{5}} = \frac{2x}{\sqrt{5}}\\
+        \big[\triangle A_{1}B_{1}C_{1}\big] &= \frac{A_{1}B_{1} \times B_{1}C_{1}}{2} \\
+        \big[\triangle A_{1}B_{1}C_{1}\big] &=  \frac{\frac{A_{0}B_{0}}{\sqrt{5}} \times \frac{B_{0}C_{0}}{\sqrt{5}}}{2} \\
+        \big[\triangle A_{1}B_{1}C_{1}\big] &=  \frac{\frac{x}{\sqrt{5}} \times \frac{2x}{\sqrt{5}}}{2} \\
+        \big[\triangle A_{1}B_{1}C_{1}\big] &=  \frac{x^2}{5}
+    \end{aligned}
+\end{equation}
 
 \subsection{Geometric series, and limit of the area}
-Define $\big[\triangle A_{n}B_{n}C_{n}\big]$ as the notation for the area of $\triangle A_{n}B_{n}C_{n}$. Recall how the area of each triangle decreases by an dilation factor of $\frac{1}{\sqrt{5}}$:
+Recall how the area of each triangle decreases by an dilation factor of $\frac{1}{\sqrt{5}}$:
 \begin{equation}
     \begin{aligned}
         \big[\triangle A_{0}B_{0}C_{0}\big] &= 1,\\
