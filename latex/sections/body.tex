@@ -145,3 +145,28 @@ Note how there are 3 spirals, depending on the vertice used in it's construction
 \input{figures/b-spiral.tex}
 
 \input{figures/c-spiral.tex}
+
+\newpage
+\subsection{Geometric series and the length of spiral segments}
+Recall that the dilation factor of each subsequent pinwheel triangle equals $\frac{1}{\sqrt{5}}$. Therefore, the length of each segment in the pinwheel spiral follows the following geometric series:
+\begin{equation}
+    \begin{aligned}
+        A_{0}A_{1} &= x \times \frac{1}{\sqrt{5}} \\
+        A_{1}A_{2} &= x \times \big(\frac{1}{\sqrt{5}}\big)^2 \\
+        A_{2}A_{3} &= x \times \big(\frac{1}{\sqrt{5}}\big)^3 \\
+        A_{3}A_{4} &= x \times \big(\frac{1}{\sqrt{5}}\big)^4 \\
+        \ldots
+    \end{aligned}
+\end{equation}
+
+\noindent
+which is of the general form $a + ar^1 + ar^2 + \ldots$, with $a = x, r = \frac{1}{\sqrt(5)}$. The same holds true for segments of the order $B_{i}$ and $C_{i}$:
+
+% Placeholder don't forget!
+
+\noindent
+The length of each spiral:
+Let $l_n$ be $\sum_{i = 0}^{n} C_iC_{i+1}$. Then the length of the spiral is:
+\begin{equation}
+    \sum_{i = 0}^{\infty} C_iC_{i+1}
+\end{equation}
