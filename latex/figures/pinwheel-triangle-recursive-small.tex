@@ -14,12 +14,6 @@
         (H_0) at ($(A_0)!(C_1)!(C_0)$);
         \coordinate [label=left: $B_{1}$]
         (B_1) at ($(A_1)!(C_1)!(B_0)$);
-
-        \draw (A_1) -- (B_0);
-        \draw (C_1) -- (H_0);
-        \draw (B_1) -- (C_1);
-        \draw (A_1) -- (C_1);
-
         \coordinate [label=above: $A_{2}$]
         (A_2) at ($(A_1)!(B_1)!(C_1)$);
         \coordinate [label=below: $C_{2}$]
@@ -29,60 +23,71 @@
         \coordinate [label=left: $B_{2}$]
         (B_2) at ($(A_2)!(C_2)!(B_1)$);
 
-        \draw (A_2) -- (B_1);
-        \draw (C_2) -- (H_1);
-        \draw (B_2) -- (C_2);
-        \draw (A_2) -- (C_2);
-
         \coordinate (A_3) at ($(A_2)!(B_2)!(C_2)$);
         \coordinate (C_3) at ($(B_2)! 0.5 !(C_2)$);
         \coordinate (H_2) at ($(A_2)!(C_3)!(C_2)$);
         \coordinate (B_3) at ($(A_3)!(C_3)!(B_2)$);
-
-        \draw (A_3) -- (B_2);
-        \draw (C_3) -- (H_2);
-        \draw (B_3) -- (C_3);
-        \draw (A_3) -- (C_3);
-
         \coordinate (A_4) at ($(A_3)!(B_3)!(C_3)$);
         \coordinate (C_4) at ($(B_3)! 0.5 !(C_3)$);
         \coordinate (H_3) at ($(A_3)!(C_4)!(C_3)$);
         \coordinate (B_4) at ($(A_4)!(C_4)!(B_3)$);
-
-        \draw (A_4) -- (B_3);
-        \draw (C_4) -- (H_3);
-        \draw (B_4) -- (C_4);
-        \draw (A_4) -- (C_4);
-
         \coordinate (A_5) at ($(A_4)!(B_4)!(C_4)$);
         \coordinate (C_5) at ($(B_4)! 0.5 !(C_4)$);
         \coordinate (H_4) at ($(A_4)!(C_5)!(C_4)$);
         \coordinate (B_5) at ($(A_5)!(C_5)!(B_4)$);
-
-        \draw (A_5) -- (B_4);
-        \draw (C_5) -- (H_4);
-        \draw (B_5) -- (C_5);
-        \draw (A_5) -- (C_5);
-
         \coordinate (A_6) at ($(A_5)!(B_5)!(C_5)$);
         \coordinate (C_6) at ($(B_5)! 0.5 !(C_5)$);
         \coordinate (H_5) at ($(A_5)!(C_6)!(C_5)$);
         \coordinate (B_6) at ($(A_6)!(C_6)!(B_5)$);
-
-        \draw (A_6) -- (B_5);
-        \draw (C_6) -- (H_5);
-        \draw (B_6) -- (C_6);
-        \draw (A_6) -- (C_6);
-
         \coordinate (A_7) at ($(A_6)!(B_6)!(C_6)$);
         \coordinate (C_7) at ($(B_6)! 0.5 !(C_6)$);
         \coordinate (H_6) at ($(A_6)!(C_7)!(C_6)$);
         \coordinate (B_7) at ($(A_7)!(C_7)!(B_6)$);
+        \coordinate (A_8) at ($(A_7)!(B_7)!(C_7)$);
+        \coordinate (C_8) at ($(B_7)! 0.5 !(C_7)$);
+        \coordinate (H_7) at ($(A_7)!(C_8)!(C_7)$);
+        \coordinate (B_8) at ($(A_8)!(C_8)!(B_7)$);
+        \coordinate (A_9) at ($(A_8)!(B_8)!(C_8)$);
+        \coordinate (C_9) at ($(B_8)! 0.5 !(C_8)$);
+        \coordinate (H_8) at ($(A_8)!(C_9)!(C_8)$);
+        \coordinate (B_9) at ($(A_9)!(C_9)!(B_8)$);
 
+        \draw (A_1) -- (B_0);
+        \draw (C_1) -- (H_0);
+        \draw (B_1) -- (C_1);
+        \draw (A_1) -- (C_1);
+        \draw (A_2) -- (B_1);
+        \draw (C_2) -- (H_1);
+        \draw (B_2) -- (C_2);
+        \draw (A_2) -- (C_2);
+        \draw (A_3) -- (B_2);
+        \draw (C_3) -- (H_2);
+        \draw (B_3) -- (C_3);
+        \draw (A_3) -- (C_3);
+        \draw (A_4) -- (B_3);
+        \draw (C_4) -- (H_3);
+        \draw (B_4) -- (C_4);
+        \draw (A_4) -- (C_4);
+        \draw (A_5) -- (B_4);
+        \draw (C_5) -- (H_4);
+        \draw (B_5) -- (C_5);
+        \draw (A_5) -- (C_5);
+        \draw (A_6) -- (B_5);
+        \draw (C_6) -- (H_5);
+        \draw (B_6) -- (C_6);
+        \draw (A_6) -- (C_6);
         \draw (A_7) -- (B_6);
         \draw (C_7) -- (H_6);
         \draw (B_7) -- (C_7);
         \draw (A_7) -- (C_7);
+        \draw (A_8) -- (B_7);
+        \draw (C_8) -- (H_7);
+        \draw (B_8) -- (C_8);
+        \draw (A_8) -- (C_8);
+        \draw (A_9) -- (B_8);
+        \draw (C_9) -- (H_8);
+        \draw (B_9) -- (C_9);
+        \draw (A_9) -- (C_9);
 
     \end{tikzpicture}
     \label{pinwheel-triangle-infinite}

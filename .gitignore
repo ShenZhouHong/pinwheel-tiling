@@ -222,3 +222,5 @@ TSWLatexianTemp*
 
 # MacOS DS_Store file
 .DS_Store
+
+latex/*.pdf
