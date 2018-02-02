@@ -1,0 +1,19 @@
+\setlength{\parindent}{0ex}
+\begin{tikzpicture}[trim axis left]
+    \begin{axis}[
+            scale only axis,
+            title=Accumulative length of vertex segments,
+            xlabel={Number of segments},
+            ylabel={Accumulative length in factors of $x$},
+            grid=major,
+            ymin=1,
+            height=7cm,
+            width=\textwidth,
+            xmin=0, xmax=10,
+            legend entries={$\mathbb{A}$,$\mathbb{B}$,$\mathbb{C}$},
+        ]
+        \addplot [blue] table {figures/a-spiral.dat};
+        \addplot [red] table {figures/b-spiral.dat};
+        \addplot [green] table {figures/c-spiral.dat};
+    \end{axis}
+\end{tikzpicture}
