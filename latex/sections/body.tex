@@ -24,6 +24,8 @@ Except when otherwise noted, I will strive to use standard terminology from the 
 
 \newpage
 \section{Construction of the pinwheel triangle}
+We will begin our investigation with the construction of the standard pinwheel triangle. Note that we will be constructing this triangle symbolically:
+
 \begin{enumerate}
     \item Draw $\triangle A_{0}B_{0}C_{0}$ where:
     \begin{equation}
@@ -53,17 +55,26 @@ Except when otherwise noted, I will strive to use standard terminology from the 
     \item Draw line $A_{1}C_{1}$.
 \end{enumerate}
 
+\noindent
+This yields the standard pinwheel triangle. A pinwheel tile can be constructed by applying the above construction (specifically, steps 2 through 6) upon every subtriangle in the larger triangle. However, we will not be doing that. Instead, we will be constructing a recursive pinwheel triangle, focusing only on the center tile:
+
 \input{figures/pinwheel-triangle.tex}
 
-\subsection{Recursive pinwheel tiling}
+\newpage
+\subsection{Recursive pinwheel triangle}
 Repeat steps 2 through 6, operating on each subsequent $\triangle A_{i}B_{i}C_{i}$.
 \input{figures/pinwheel-triangle-recursive-small.tex}
+
+\noindent
+This yields the recursive pinwheel triangle that will be the subject of our exploration.
 
 \newpage
 \input{figures/pinwheel-triangle-recursive-large.tex}
 
 
-\section{Properties of the recursive pinwheel tiling}
+\section{Properties of the recursive pinwheel triangle}
+To begin this investigation, we will first explore the geometric properties of this recursive pinwheel triangle.
+
 \subsection{Angles}
 For each angle in $\triangle A_{i}B_{i}C_{i}$, where the vertices are of the same level $n$ (e.g. $\angle A_{6}B_{6}C_{6}$). This property is apparent becasue each subsequent triangle is similar, therefore all angles are equal.
 \begin{equation}
@@ -75,7 +86,11 @@ For each angle in $\triangle A_{i}B_{i}C_{i}$, where the vertices are of the sam
 \end{equation}
 
 \subsection{Area and dilation factor}
-Let length $A_{0}B_{0} = x$. Define $\big<\triangle A_{i}B_{i}C_{i}\big>$ as the notation for the area of $\triangle A_{i}B_{i}C_{i}$. Therefore, $\big<\triangle A_{0}B_{0}C_{0}\big> = x^2$. Because $\triangle A_{0}B_{0}C_{0}$ contains five isometric subtriangles of the order $\triangle A_{1}B_{1}C_{1}$, the area of each $n = 1$ triangle equals $\frac{x^2}{5}$. Recall that length $A_{1}C_{1} = A_{0}C_{0}$, where: $A_{1}C_{1} = \sqrt{(A_{1}B_{1})^2 + (B_{1}C_{1})^2}$. As a result, it is shown that each shape is shrunk by an dilation factor of $\frac{1}{\sqrt{5}}$, for $\sqrt{5} \times \frac{1}{\sqrt{5}} = 1$:
+Let length $A_{0}B_{0} = x$. Define $\big<\triangle A_{i}B_{i}C_{i}\big>$ as the notation for the area of $\triangle A_{i}B_{i}C_{i}$. Therefore, $\big<\triangle A_{0}B_{0}C_{0}\big> = x^2$. Because $\triangle A_{0}B_{0}C_{0}$ contains five isometric subtriangles of the order $\triangle A_{1}B_{1}C_{1}$, the area of each $n = 1$ triangle equals $\frac{x^2}{5}$. Recall that length $A_{1}C_{1} = A_{0}C_{0}$, where: $A_{1}C_{1} = \sqrt{(A_{1}B_{1})^2 + (B_{1}C_{1})^2}$.
+
+\newpage
+\noindent
+As a result, it is shown that each shape is shrunk by an dilation factor of $\frac{1}{\sqrt{5}}$, for $\sqrt{5} \times \frac{1}{\sqrt{5}} = 1$:
 \begin{equation}
     \begin{aligned}
         A_{i-1}B_{i-1} &= \frac{A_{i}B_{i}}{\sqrt{5}} \\
@@ -85,7 +100,7 @@ Let length $A_{0}B_{0} = x$. Define $\big<\triangle A_{i}B_{i}C_{i}\big>$ as the
 \end{equation}
 
 \noindent
-Likewise, the area of each subsequent triangle $\triangle A_{i}B_{i}C_{i}$ is shrunk by the same factor. This can be proven by first finding the area of the subtriangle by simple division:
+Likewise, the area of each subsequent triangle $\triangle A_{i}B_{i}C_{i}$ is shrunk by the same factor. This can be proven by finding the area of the subtriangle by division:
 
 \begin{equation}
     \begin{aligned}
@@ -98,6 +113,7 @@ Likewise, the area of each subsequent triangle $\triangle A_{i}B_{i}C_{i}$ is sh
     \end{aligned}
 \end{equation}
 
+\newpage
 \noindent
 Followed by calculating the area of the subtriangle via $A = \frac{l\times h}{2}$. Both values are equal:
 
@@ -119,7 +135,6 @@ Recall how the area of each triangle decreases by an dilation factor of $\frac{1
         \big<\triangle A_{0}B_{0}C_{0}\big> &= x^2,\\
         \big<\triangle A_{1}B_{1}C_{1}\big> &= \frac{x^2}{5},\\
         \big<\triangle A_{2}B_{2}C_{2}\big> &= \frac{x^2}{25},\\
-        \big<\triangle A_{3}B_{3}C_{3}\big> &= \frac{x^2}{125},\\
         \ldots
     \end{aligned}
 \end{equation}
