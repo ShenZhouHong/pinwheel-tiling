@@ -190,9 +190,9 @@ A simple way to approximate the absolute length (denoted as $\mathbb{A}, \mathbb
 Now we can visually see that the length of each vertex segment rapidly convergences upon a certain value:
 \begin{equation}
     \begin{aligned}
-        \mathbb{A} &\approx 1.81 \\
-        \mathbb{B} &\approx 3.62 \\
-        \mathbb{C} &\approx 4.04 \\
+        \mathbb{A} &\approx 1.81x \\
+        \mathbb{B} &\approx 3.62x \\
+        \mathbb{C} &\approx 4.04x \\
     \end{aligned}
 \end{equation}
 
@@ -221,5 +221,26 @@ By applying the above formula, we obtain the following equations for the length 
         \mathbb{A} = \lim_{n \to \infty} \sum_{i=0}^{n} A_0\left(\frac{1}{\sqrt{5}}\right)^i &=\frac{A_0}{1-\frac{1}{\sqrt{5}}} \\
         \mathbb{B} = \lim_{n \to \infty} \sum_{i=0}^{n} B_0\left(\frac{1}{\sqrt{5}}\right)^i &=\frac{B_0}{1-\frac{1}{\sqrt{5}}} \\
         \mathbb{C} = \lim_{n \to \infty} \sum_{i=0}^{n} C_0\left(\frac{1}{\sqrt{5}}\right)^i &=\frac{C_0}{1-\frac{1}{\sqrt{5}}} \\
+    \end{aligned}
+\end{equation}
+
+\noindent
+Therefore, we can obtain the absolute value of the length of these vertex spiral segments, by substituting $A_0$, $B_0$, and $C_0$ with their respective values:
+
+\begin{equation}
+    \begin{aligned}
+        \mathbb{A} &=\frac{x}{1-\frac{1}{\sqrt{5}}} \\
+        \mathbb{B} &=\frac{2x}{1-\frac{1}{\sqrt{5}}} \\
+        \mathbb{C} &=\frac{\sqrt{(x)^2 + (2x)^2}}{1-\frac{1}{\sqrt{5}}}
+    \end{aligned}
+\end{equation}
+
+\noindent
+By solving for factors of x, this results in numerical solutions that are in alignment with our graphical approximation from the previous section:
+\begin{equation}
+    \begin{aligned}
+        \mathbb{A} &=\frac{x}{1-\frac{1}{\sqrt{5}}} &\approx 1.809016994x\\
+        \mathbb{B} &=\frac{2x}{1-\frac{1}{\sqrt{5}}} &\approx 3.618033989x\\
+        \mathbb{C} &=\frac{\sqrt{(x)^2 + (2x)^2}}{1-\frac{1}{\sqrt{5}}} &\approx 4.045084972x
     \end{aligned}
 \end{equation}
